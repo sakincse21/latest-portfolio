@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Space theme with stellar aesthetics */
+
+@layer base {
+  :root {
+    /* Light Mode - Deep space with warm accents */
+    --background: 220 30% 8%;  /* Deep space blue-black */
+    --foreground: 60 100% 95%; /* Warm white like starlight */
+    --surface: 220 25% 12%;    /* Slightly lighter space */
+    --surface-alt: 220 20% 16%; /* Card surfaces */
+    
+    /* Accent Colors - Cosmic theme */
+    --accent-warm: 0 0% 95%;       /* Pure white */
+    --accent-warm-foreground: 220 30% 8%;
+    --accent-soft: 220 15% 85%;    /* Light gray */
+    
+    /* Portfolio specific colors */
+    --hero-accent: 0 0% 90%;       /* Off-white */
+    --text-secondary: 220 15% 75%; /* Light blue-gray */
+    --text-light: 220 10% 60%;     /* Muted stellar */
+
+    --card: 220 25% 12%;
+    --card-foreground: 60 100% 95%;
+
+    --popover: 220 30% 10%;
+    --popover-foreground: 60 100% 95%;
+
+    --primary: 0 0% 90%;           /* Off-white primary */
+    --primary-foreground: 220 30% 8%;
+
+    --secondary: 260 40% 25%;      /* Deep purple */
+    --secondary-foreground: 60 100% 95%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 15% 70%;
+
+    --accent: 220 15% 85%;         /* Light gray accent */
+    --accent-foreground: 220 30% 8%;
+
+    --destructive: 0 75% 60%;      /* Mars red */
+    --destructive-foreground: 60 100% 95%;
+
+    --border: 220 20% 25%;         /* Subtle borders */
+    --input: 220 25% 15%;
+    --ring: 0 0% 90%;              /* White focus ring */
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 30% 10%;
+    --sidebar-foreground: 220 15% 80%;
+    --sidebar-primary: 0 0% 90%;
+    --sidebar-primary-foreground: 220 30% 8%;
+    --sidebar-accent: 220 25% 15%;
+    --sidebar-accent-foreground: 220 15% 80%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 0 0% 90%;
+  }
+
+  .dark {
+    /* Dark Mode - Deeper space with cooler accents */
+    --background: 225 40% 4%;      /* Deeper space */
+    --foreground: 200 25% 90%;     /* Cool starlight */
+
+    --card: 225 35% 6%;
+    --card-foreground: 200 25% 90%;
+
+    --popover: 225 40% 5%;
+    --popover-foreground: 200 25% 90%;
+
+    --primary: 0 0% 95%;           /* Pure white */
+    --primary-foreground: 225 40% 4%;
+
+    --secondary: 270 50% 20%;      /* Deep cosmic purple */
+    --secondary-foreground: 200 25% 90%;
+
+    --muted: 225 30% 12%;
+    --muted-foreground: 220 20% 65%;
+
+    --accent: 0 0% 85%;            /* Light gray accent */
+    --accent-foreground: 225 40% 4%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 200 25% 90%;
+
+    --border: 225 25% 15%;
+    --input: 225 30% 10%;
+    --ring: 0 0% 95%;              /* Pure white focus ring */
+    
+    --sidebar-background: 225 40% 5%;
+    --sidebar-foreground: 200 20% 85%;
+    --sidebar-primary: 0 0% 95%;
+    --sidebar-primary-foreground: 225 40% 4%;
+    --sidebar-accent: 225 30% 10%;
+    --sidebar-accent-foreground: 200 20% 85%;
+    --sidebar-border: 225 25% 12%;
+    --sidebar-ring: 0 0% 95%;
+
+    /* Dark mode specific overrides */
+    --hero-accent: 0 0% 95%;       /* Pure white */
+    --text-secondary: 200 20% 70%; /* Cool light gray */
+    --text-light: 200 15% 55%;     /* Muted cool gray */
+    --accent-warm: 0 0% 90%;       /* Off-white */
+    --accent-soft: 220 15% 75%;    /* Light gray */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    /* Add subtle texture to enhance the space theme */
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+/* Typography & Animation System - Enhanced for space theme */
+@layer components {
+  .hero-text {
+    @apply text-2xl md:text-5xl font-bold tracking-tight text-hero-accent;
+    line-height: 1.1;
+    text-shadow: 0 0 20px hsl(var(--hero-accent) / 0.2);
+  }
+  
+  .section-heading {
+    @apply text-2xl md:text-3xl font-semibold text-foreground mb-8;
+    text-shadow: 0 0 10px hsl(var(--foreground) / 0.3);
+  }
+  
+  .body-text {
+    @apply text-base text-text-secondary leading-relaxed;
+  }
+  
+  .stat-number {
+    @apply text-4xl font-bold text-hero-accent;
+    text-shadow: 0 0 15px hsl(var(--hero-accent) / 0.4);
+  }
+  
+  .fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-4px];
+    /* Add glow effect on hover */
+  }
+  
+  .hover-lift:hover {
+    box-shadow: 2px 2px 24px hsl(var(--hero-accent) / 0.2);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--hero-accent)), hsl(var(--accent-warm)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Space-themed components */
+  .cosmic-card {
+    @apply bg-surface border border-border rounded-xl backdrop-blur-sm;
+    background: linear-gradient(135deg, hsl(var(--surface) / 0.8), hsl(var(--surface-alt) / 0.6));
+    box-shadow: 0 8px 32px hsl(var(--background) / 0.8);
+  }
+  
+  .stellar-button {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--accent-warm)), hsl(var(--accent-soft)));
+    box-shadow: 0 4px 15px hsl(var(--accent-warm) / 0.3);
+  }
+  
+  .stellar-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px hsl(var(--accent-warm) / 0.4);
+  }
+}
