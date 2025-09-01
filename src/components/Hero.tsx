@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a
+             <a
               href="https://drive.google.com/file/d/1VmYR8kHNNAuXTYH10-fUUkQC0A4H9EAM/view?usp=sharing"
               target="_blank"
             >
