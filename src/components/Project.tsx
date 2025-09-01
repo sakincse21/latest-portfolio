@@ -5,6 +5,7 @@ import { TiltEffect } from "./ui/tilt-effect";
 import { Card } from "./ui/card";
 import designerPortrait from "@/assets/designer-portrait.jpg";
 import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const projects = [
@@ -78,6 +79,7 @@ export const projects = [
 const Project = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -176,7 +178,7 @@ const Project = () => {
                             <Button
                               size="sm"
                               className="text-xs"
-                              variant="destructive"
+                              variant="default"
                             >
                               <Link />
                               Live
@@ -189,7 +191,7 @@ const Project = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Button size="sm" className="text-xs">
+                            <Button size="sm" className="text-xs" variant="outline">
                               <GithubIcon />
                               Frontend
                             </Button>
@@ -201,7 +203,7 @@ const Project = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Button size="sm" className="text-xs">
+                            <Button size="sm" className="text-xs" variant="outline">
                               <GithubIcon />
                               Backend
                             </Button>
@@ -215,6 +217,15 @@ const Project = () => {
             </div>
           ))}
         </div>
+        <p className="w-full flex flex-row justify-end mt-6">
+          <Button
+            onClick={() => navigate("/projects")}
+            variant="outline"
+            className="mb-8 border-hero-accent text-hero-accent hover:bg-hero-accent hover:text-surface"
+          >
+            See All Projects
+          </Button>
+        </p>
       </div>
     </section>
   );
