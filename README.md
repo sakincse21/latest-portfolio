@@ -16,7 +16,7 @@ A modern, responsive portfolio website showcasing my journey as a Full Stack Dev
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/sakincse21/portfolio.git
+   git clone https://github.com/sakincse21/latest-portfolio.git
    cd portfolio
    ```
 
