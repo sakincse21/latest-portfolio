@@ -36,7 +36,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a
-              href="https://drive.google.com/file/d/10rAURSFi2pdiu9tKR8vN99aRogdA4Qhn/view?usp=sharing"
+              href="https://drive.google.com/file/d/1VmYR8kHNNAuXTYH10-fUUkQC0A4H9EAM/view?usp=sharing"
               target="_blank"
             >
               <Button
@@ -47,7 +47,7 @@ const Hero = () => {
               </Button>
             </a>
             <a
-              href="https://drive.usercontent.google.com/download?id=10rAURSFi2pdiu9tKR8vN99aRogdA4Qhn&export=download&authuser=0&confirm=t&uuid=0b87e517-b1f5-4035-a16a-e5d8a8ac1d38&at=AN8xHopxUfnJC9_-inDdpzFnw4_p:1756673107478"
+              href="https://drive.usercontent.google.com/download?id=1VmYR8kHNNAuXTYH10-fUUkQC0A4H9EAM&export=download&authuser=0"
               target="_blank"
             >
               <Button
