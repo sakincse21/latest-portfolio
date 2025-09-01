@@ -34,8 +34,8 @@ const projects = [
       backend: "https://github.com/sakincse21/Digital-Banking-System",
     },
     slug: "paisahipaisa-mfs-app",
-    date: "2024-11-15",
-    duration: "2 months",
+    date: "2025-08-1",
+    duration: "1 month",
     features: [
       "User registration and secure login system",
       "Wallet balance management",
@@ -81,7 +81,7 @@ const projects = [
     },
     slug: "blood-lagbe-donation-app",
     date: "2024-10-20",
-    duration: "1.5 months",
+    duration: "1 week",
     features: [
       "User registration and authentication with Clerk",
       "Blood donor search by location and blood type",
@@ -120,8 +120,8 @@ const projects = [
       backend: "https://github.com/sakincse21/L2B5-Assignment3",
     },
     slug: "library-management-system",
-    date: "2024-09-10",
-    duration: "3 weeks",
+    date: "2025-07-04",
+    duration: "1 week",
     features: [
       "Book catalog with search and filter functionality",
       "User authentication and profile management",

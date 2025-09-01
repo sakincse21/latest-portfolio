@@ -217,7 +217,7 @@ const Project = () => {
             </div>
           ))}
         </div>
-        <p className="w-full flex flex-row justify-end mt-6">
+        <p className="w-full flex flex-row justify-center md:justify-end mt-8">
           <Button
             onClick={() => navigate("/projects")}
             variant="outline"
