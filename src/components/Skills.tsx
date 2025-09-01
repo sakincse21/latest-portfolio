@@ -89,6 +89,43 @@ const Skills = () => {
         },
       ],
     },
+    {
+      title: "Academics",
+      skills: [
+        {
+          name: "C",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+        },
+        {
+          name: "C++",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+        },
+        {
+          name: "Java",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        },
+        {
+          name: "JavaFX",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        },
+        {
+          name: "Python",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        },
+        {
+          name: "Arduino",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
+        },
+        {
+          name: "MySQL",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        },
+        {
+          name: "PHP",
+          logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+        },
+      ],
+    },
   ];
 
   return (
@@ -112,7 +149,7 @@ const Skills = () => {
             >
               {/* Category Title */}
               <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
                   {category.title}
                 </h3>
                 <div className="w-20 h-1 bg-gradient-to-r from-hero-accent to-accent-warm mx-auto rounded-full"></div>

@@ -1,46 +1,51 @@
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Education', href: '#education' },
-    { label: 'Projects', href: '#project' },
-    { label: 'Contact', href: '#contact' }
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Education", href: "#education" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#project" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
   };
 
   return (
-    <nav className={`fixed top-1 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'backdrop-blur-md  bg-surface/50 shadow-sm' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-1 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "backdrop-blur-md  bg-surface/50 shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-xl font-bold text-hero-accent">
-            Saleheen
-          </div>
+          <div className="text-xl font-bold text-hero-accent">Saleheen</div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -57,11 +62,12 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button 
-              onClick={() => scrollToSection('#contact')}
-              className="bg-hero-accent text-surface px-6 py-2 hover:bg-hero-accent/90 transition-all duration-300"
+            <Button
+              onClick={() => navigate("/blogs")}
+              className="px-6 py-2 hover:bg-destructive/45 transition-all duration-300"
+              variant="destructive"
             >
-              Let's Talk
+              Read My Blogs
             </Button>
           </div>
 
@@ -88,11 +94,12 @@ const Navigation = () => {
                 </button>
               ))}
               <div className="px-6 pt-4">
-                <Button 
-                  onClick={() => scrollToSection('#contact')}
-                  className="bg-hero-accent text-surface w-full hover:bg-hero-accent/90 transition-all duration-300"
+                <Button
+                  onClick={() => navigate("/blogs")}
+                  className="w-full transition-all duration-300"
+                  variant="destructive"
                 >
-                  Let's Talk
+                  Read My Blogs
                 </Button>
               </div>
             </div>

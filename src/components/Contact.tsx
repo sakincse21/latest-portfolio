@@ -8,6 +8,7 @@ import { toast } from 'sonner';
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const [contactDetail, setContactDetail] = useState({name:'',email:'',subject:'',text:''});
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,7 +31,15 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Message received successfully. I will response as soon as possible. Thank you <3.");
+    // if(contactDetail.email && contactDetail.name && contactDetail.subject && contactDetail.text){
+    //   sendMail(contactDetail.subject,contactDetail.email,contactDetail.text);
+    //   const element = document.querySelector('#home');
+    //   if (element) {
+    //     element.scrollIntoView({ behavior: "smooth" });
+    //   }
+    // }else{
+    //   toast.error("Please fill up the full form.")
+    // }
   }
 
   return (
@@ -53,6 +62,10 @@ const Contact = () => {
                   <Input 
                     placeholder="Your Name"
                     className="bg-surface border-0 focus-visible:ring-1 focus-visible:ring-hero-accent/20"
+                    onChange={(e)=>{
+                      e.preventDefault();
+                      setContactDetail({...contactDetail,name:e.target.value})
+                    }}
                   />
                 </div>
                 <div>
@@ -60,6 +73,10 @@ const Contact = () => {
                     type="email"
                     placeholder="Your Email"
                     className="bg-surface border-0 focus-visible:ring-1 focus-visible:ring-hero-accent/20"
+                    onChange={(e)=>{
+                      e.preventDefault();
+                      setContactDetail({...contactDetail,email:e.target.value})
+                    }}
                   />
                 </div>
               </div>
@@ -67,12 +84,20 @@ const Contact = () => {
               <Input 
                 placeholder="Message Subject"
                 className="bg-surface border-0 focus-visible:ring-1 focus-visible:ring-hero-accent/20"
+                    onChange={(e)=>{
+                      e.preventDefault();
+                      setContactDetail({...contactDetail,subject:e.target.value})
+                    }}
               />
               
               <Textarea 
                 placeholder="Tell me about your thoughts..."
                 rows={6}
                 className="bg-surface border-0 focus-visible:ring-1 focus-visible:ring-hero-accent/20 resize-none"
+                    onChange={(e)=>{
+                      e.preventDefault();
+                      setContactDetail({...contactDetail,text:e.target.value})
+                    }}
               />
               
               <Button 

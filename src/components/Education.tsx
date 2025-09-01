@@ -56,7 +56,7 @@ const Education = () => {
           {education.map((edu, index) => (
             <div
               key={edu.title}
-              className={`bg-surface/80 backdrop-blur-sm rounded-xl p-6 hover-lift fade-in max-w-sm w-full sm:w-auto ${isVisible ? 'visible' : ''}`}
+              className={`bg-surface/80 rounded-xl p-6 hover-lift fade-in max-w-sm w-full sm:w-auto ${isVisible ? 'visible' : ''}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-12 h-12 bg-gradient-to-br from-hero-accent/20 to-accent-warm/20 rounded-lg flex items-center justify-center mb-4">

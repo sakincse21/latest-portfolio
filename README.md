@@ -1,45 +1,52 @@
-# Welcome to My portfolio
+# 🌟 Saleheen Uddin Sakin - Portfolio
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+A modern, responsive portfolio website showcasing my journey as a Full Stack Developer. Built with cutting-edge technologies and featuring a cosmic space theme with smooth animations and interactive elements.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Live Demo
 
-Follow these steps:
+[View Live Portfolio](https://sakincse21.vercel.app/)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Getting Started
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Installation
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sakincse21/portfolio.git
+   cd portfolio
+   ```
 
-**Edit a file directly in GitHub**
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-**Use GitHub Codespaces**
+## 📄 License
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## What technologies are used for this project?
+## 📞 Contact
 
-This project is built with:
+**Saleheen Uddin Sakin**
+- Email: saleheen.sakin@gmail.com
+- GitHub: [@sakincse21](https://github.com/sakincse21)
+- LinkedIn: [Saleheen Uddin Sakin](https://www.linkedin.com/in/saleheen-sakin)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
+
+⭐ **Star this repository if you found it helpful!**
+
+Built with ❤️ by Saleheen Uddin Sakin

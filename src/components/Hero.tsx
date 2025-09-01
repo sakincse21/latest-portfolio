@@ -4,6 +4,8 @@ import designerPortrait from "@/assets/designer-portrait.jpg";
 import { ImageZoom } from "./ui/shadcn-io/image-zoom";
 import { TiltEffect } from "@/components/ui/tilt-effect";
 import { Card } from "./ui/card";
+import MyProfiles from "./MyProfiles";
+import Profiles from "./Profiles";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,6 +59,8 @@ const Hero = () => {
               </Button>
             </a>
           </div>
+          {/* <MyProfiles /> */}
+          <Profiles />
         </div>
 
         {/* Portrait */}

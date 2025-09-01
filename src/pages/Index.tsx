@@ -12,6 +12,7 @@ import {
   CursorFollow,
   CursorProvider,
 } from "@/components/ui/shadcn-io/animated-cursor";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -44,15 +45,12 @@ const Index = () => {
         <section id="contact">
           <Contact />
         </section>
+
+        <section id="footer">
+          <Footer />
+        </section>
       </main>
 
-      <footer className="bg-surface  text-accent py-8 backdrop-blur-md">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-sm opacity-80">
-            © 2024 Saleheen Uddin Sakin. All rights reserved.
-          </p>
-        </div>
-      </footer>
 
       <ScrollProgressBar
         type="bar"
@@ -75,7 +73,7 @@ const Index = () => {
           </svg>
         </Cursor>
         <CursorFollow>
-          <div className="bg-transparent text-white px-2 py-1 rounded-lg text-sm shadow-lg">
+          <div className="bg-destructive text-white px-2 py-1 rounded-lg text-sm shadow-lg">
             Hire Me
           </div>
         </CursorFollow>
